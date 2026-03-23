@@ -745,3 +745,44 @@ open(QNetworkRequest{wss://desktop-notify.telega.info/ws?...})
 
 ### Схема работы Telega
 ![alt text](dc_auth_flow.svg)
+
+### canary.txt
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+canary
+======
+
+date: 2026-03-20
+next update no later: 2026-04-20
+latest btc block hash: 00000000000000000001a2cb676e8a5ba60c00e51a9cfbd8b0a43faba65c8f76
+
+as of the date of signing this document:
+
+1. the authors have not received any requests to remove
+   or alter the content of this publication from any
+   individuals, organizations, or government agencies.
+
+2. the authors have not received any requests to disclose
+   sources, research methods, or personal data of readers.
+
+3. the authors have not received any court orders, subpoenas,
+   or other legal process documents in connection with this
+   publication.
+
+4. the authors are in good health, acting freely, and not
+   subject to any form of coercion.
+
+failure to update this document by the stated deadline
+should be interpreted as inability to sign it.
+
+public key can be found here: https://keys.openpgp.org/vks/v1/by-fingerprint/7C7FD763D309F00DC0BE599F7EE86E43B7439405
+-----BEGIN PGP SIGNATURE-----
+
+iJEEARYKADkWIQR8f9dj0wnwDcC+WZ9+6G5Dt0OUBQUCab0t3RsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwyLDEACgkQfuhuQ7dDlAVlqgD8CnvYh3Vuwkr31dLb3pts
+oXTZaYDsevRAt6cutZ5ETxgA/jrTExiRexDbie4zsc3wrc9QVht7gIMDTHBLbb3r
+WfgG
+=x6M5
+-----END PGP SIGNATURE-----
