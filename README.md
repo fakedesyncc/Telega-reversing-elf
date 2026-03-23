@@ -1,3 +1,8 @@
+### Документ основан на постах о нашумевшем Telega app(Linux elf): 
+
+https://habr.com/ru/articles/1000792/
+https://kod.ru/telega-mitm-telegram-traffic
+
 ## TL;DR
 
 - Это модифицированный клиент (fork), а не неизмененный официальный Telegram Desktop.
@@ -709,18 +714,7 @@ DcManager::configureFromApi: DC proxy config loaded from API: version=%1, dcs co
 DcManager::configureFromApi: Warning: Telega requires DC list, fallback to Telegram
 ```
 
-### Что не подтверждено в Linux ELF
-
-```text
-$ strings Telega | rg -n "use_pfs|enable_sc|blacklist/filter|dc_force_switch|dc_update_version"
-NO_MATCH_STRICT
-```
-
-Интерпретация:
-- По этому ELF нельзя подтвердить Android-тезисы статьи про `use_pfs`, `enable_sc`, Android deep-link/push обработчики.
-- Это **не** опровергает статью про Android; это означает только, что такие артефакты не найдены в Linux-сборке.
-
-### Схемы (по подтвержденному коду)
+### Схемы
 
 ```text
 [Core::DcManager::configureFromApi]
@@ -748,10 +742,6 @@ QWebSocket + signals(connect/disconnect/error/message)
 open(QNetworkRequest{wss://desktop-notify.telega.info/ws?...})
 ```
 
-### Итог
-
-- **Подтверждено по Linux-бинарю:** наличие удаленно управляемого DC/proxy контура, собственного WS control-channel, отдельного пула Telega DC IP и отличающегося набора RSA-ключей.
-- **Не подтверждено статикой Linux ELF:** момент активации MITM на конкретную дату и Android-специфичные тезисы (`use_pfs`, `enable_sc`, moderation/Firebase-механики).
 
 ### Схема работы Telega
 ![alt text](dc_auth_flow.svg)
